@@ -133,7 +133,7 @@ class HBNBCommand(cmd.Cmd):
         print("[Usage]: create <className>\n")
 
     def do_show(self, args):
-        """to show an individual object."""
+        """To show an individual object."""
         new = args.partition(" ")
         c_name = new[0]
         c_id = new[2]
@@ -234,7 +234,7 @@ class HBNBCommand(cmd.Cmd):
         print("Usage: count <class_name>")
 
     def do_update(self, args):
-        """Updates a certain object with new info."""
+        """Update a certain object with new info."""
         c_name = c_id = att_name = att_val = kwargs = ''
 
         # isolate cls from id/args, ex: (<cls>, delim, <id/args>)
