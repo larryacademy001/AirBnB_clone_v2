@@ -29,13 +29,13 @@ class test_basemodel(unittest.TestCase):
                          "Found code style errors (and warnings).")
 
     def setUp(self):
-        """ """
+        """Setup"""
         pass
 
     def tearDown(self):
         try:
             os.remove('file.json')
-        except:
+        except FileNotFoundError:
             pass
 
     def test_default(self):
