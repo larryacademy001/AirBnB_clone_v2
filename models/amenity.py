@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Amenity class with SQLAlchemy ORM mappings,
+Amenity class with SQLAlchemy ORM mappings
 including a relationship with the Place class
 to represent the many-to-many relationship
 between amenities and places.
@@ -18,6 +18,7 @@ class Amenity(BaseModel, Base):
 
     Public class attributes:
         name (str): The name of the amenity.
+
     """
     __tablename__ = "amenities"
     name = Column(String(128), nullable=False)
