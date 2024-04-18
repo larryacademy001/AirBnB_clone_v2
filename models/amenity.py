@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Amenity class with SQLAlchemy ORM mappings
+"""
+Amenity class with SQLAlchemy ORM mappings,
 including a relationship with the Place class
 to represent the many-to-many relationship
 between amenities and places.
