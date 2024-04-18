@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Place class with SQLAlchemy ORM mappings,
-including relationships with other classes 
+including relationships with other classes
 such as Review and Amenity.
 """
 from os import getenv
