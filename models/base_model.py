@@ -7,7 +7,7 @@ import uuid
 import models
 from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import  String, DateTime, Column, Integer
+from sqlalchemy import String, DateTime, Column, Integer
 
 Base = declarative_base()
 
@@ -63,13 +63,13 @@ class BaseModel:
         return self.__str__()
 
     def save(self):
-       """Updates updated_at with the current datetime and save modelobject"""
+        """Updates updated_at with the current datetime and save modelobject"""
         self.updated_at = datetime.now()
         models.storage.new(self)
         models.storage.save()
 
     def to_dict(self):
-       """Returns a modified dictionary with all attributes of an object"""
+        """Returns a modified dictionary with all attributes of an object"""
         my_dict = dict(self.__dict__)
         my_dict["__class__"] = str(type(self).__name__)
         my_dict["created_at"] = self.created_at.isoformat()
