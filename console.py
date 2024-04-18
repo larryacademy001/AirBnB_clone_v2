@@ -111,7 +111,7 @@ class HBNBCommand(cmd.Cmd):
         print("Exits the program without formatting\n")
 
     def emptyline(self):
-        """Overrides the emptyline method of CMD."""
+        """Override the emptyline method of CMD."""
         pass
 
     def do_create(self, args):
@@ -133,7 +133,7 @@ class HBNBCommand(cmd.Cmd):
         print("[Usage]: create <className>\n")
 
     def do_show(self, args):
-        """Method to show an individual object."""
+        """to show an individual object."""
         new = args.partition(" ")
         c_name = new[0]
         c_id = new[2]
@@ -230,11 +230,11 @@ class HBNBCommand(cmd.Cmd):
         print(count)
 
     def help_count(self):
-        """ """
+        """Provide instructions for counting class instances."""
         print("Usage: count <class_name>")
 
     def do_update(self, args):
-        """ Updates a certain object with new info """
+        """Updates a certain object with new info."""
         c_name = c_id = att_name = att_val = kwargs = ''
 
         # isolate cls from id/args, ex: (<cls>, delim, <id/args>)
