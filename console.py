@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for HBNB console"""
+"""Module for HBNB console."""
 
 import cmd
 import sys
