@@ -111,11 +111,11 @@ class HBNBCommand(cmd.Cmd):
         print("Exits the program without formatting\n")
 
     def emptyline(self):
-        """ Overrides the emptyline method of CMD """
+        """Overrides the emptyline method of CMD."""
         pass
 
     def do_create(self, args):
-        """ Create an object of any class"""
+        """Create an object of any class."""
         if not args:
             print("** class name missing **")
             return
@@ -128,12 +128,12 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
 
     def help_create(self):
-        """ Help information for the create method """
+        """Help information for the create method."""
         print("Creates a class of any type")
         print("[Usage]: create <className>\n")
 
     def do_show(self, args):
-        """ Method to show an individual object """
+        """Method to show an individual object."""
         new = args.partition(" ")
         c_name = new[0]
         c_id = new[2]
@@ -161,12 +161,12 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def help_show(self):
-        """ Help information for the show command """
+        """Help information for the show command."""
         print("Shows an individual instance of a class")
         print("[Usage]: show <className> <objectId>\n")
 
     def do_destroy(self, args):
-        """ Destroys a specified object """
+        """Destroy a specified object."""
         new = args.partition(" ")
         c_name = new[0]
         c_id = new[2]
@@ -194,12 +194,12 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def help_destroy(self):
-        """ Help information for the destroy command """
+        """Help information for the destroy command."""
         print("Destroys an individual instance of a class")
         print("[Usage]: destroy <className> <objectId>\n")
 
     def do_all(self, args):
-        """ Shows all objects, or all objects of a class"""
+        """Show all objects, or all objects of a class."""
         print_list = []
 
         if args:
@@ -217,12 +217,12 @@ class HBNBCommand(cmd.Cmd):
         print(print_list)
 
     def help_all(self):
-        """ Help information for the all command """
+        """Help information for the all command."""
         print("Shows all objects, or all of a class")
         print("[Usage]: all <className>\n")
 
     def do_count(self, args):
-        """Count current number of class instances"""
+        """Count current number of class instances."""
         count = 0
         for k, v in storage._FileStorage__objects.items():
             if args == k.split('.')[0]:
