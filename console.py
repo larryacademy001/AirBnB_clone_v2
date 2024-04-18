@@ -94,7 +94,7 @@ class HBNBCommand(cmd.Cmd):
         return stop
 
     def do_quit(self, command):
-        """Function to exit the HBNB console."""
+        """Exit the HBNB console."""
         exit()
 
     def help_quit(self):
