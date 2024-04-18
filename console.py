@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Console Module"""
+"""Console Module."""
 import cmd
 import sys
 from models.base_model import BaseModel
@@ -13,7 +13,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """ Contains the functionality for the HBNB console"""
+    """Contains the functionality for the HBNB console."""
 
     # determines prompt for interactive/non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
@@ -316,7 +316,7 @@ class HBNBCommand(cmd.Cmd):
         new_dict.save()  # save updates to file
 
     def help_update(self):
-        """Help information for the update class"""
+        """Help information for the update class."""
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
 
