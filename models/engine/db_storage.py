@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" DB Storage for sqlalchemy """
+"""DB Storage for sqlalchemy."""
 from os import getenv
 from sqlalchemy import (create_engine)
 from sqlalchemy.ext.declarative import declarative_base
