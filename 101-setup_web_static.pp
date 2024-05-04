@@ -1,4 +1,4 @@
-# Redo the task #0 but by using Puppet.
+# Configures a web server for deployment of web_static.
 
 # Nginx configuration file
 $nginx_conf = "server {

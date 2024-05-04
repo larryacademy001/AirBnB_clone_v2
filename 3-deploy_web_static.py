@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Fabric script (based on the file 2-do_deploy_web_static.py)
-that creates and distributes an archive to your web servers,
-using the function deploy
+Fabric script based on the file 2-do_deploy_web_static.py that creates and
+distributes an archive to the web servers
+
+execute: fab -f 3-deploy_web_static.py deploy -i ~/.ssh/id_rsa -u ubuntu
 """
 
 from fabric.api import env, local, put, run
 from datetime import datetime
 from os.path import exists, isdir
-env.hosts = ['52.204.70.156', '34.227.91.238']
+env.hosts = ['54.160.77.90', '10.25.190.21']
 
 
 def do_pack():
@@ -25,7 +26,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    """distributes archives"""
+    """distributes an archive to the web servers"""
     if exists(archive_path) is False:
         return False
     try:
@@ -46,7 +47,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
-    """creates and distributes archives"""
+    """creates and distributes an archive to the web servers"""
     archive_path = do_pack()
     if archive_path is None:
         return False
